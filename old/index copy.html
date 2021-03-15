@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>요즘 동물상 테스트</title>
+    <meta name="title" content="동물상 분석 테스트">
+    <meta name="subject" content="인공 지능 동물상 분석 테스트">
+    <meta name="description" content="인공지능이 말해주는 동물상" />
+    <meta name="keywords"
+        content="전생, 동물상, 동물상테스트, 동물상 ,분석,  연예인 동물상 테스트,  동물상, 동물상 보는법, 동물상 테스트, face test, ai test" />
+    <meta name="author" content="원더맨777">
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://animalface2.netlify.app/" />
+    <meta property="og:url" content="https://animalface2.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="인공지능이 말해주는 동물상 테스트" />
+    <meta property="og:description" content="사진으로 분석하는 인공지능 동물상 테스트, 재미로 동물상 테스트. 인공지능(인공이)이 동물상을 분석합니다." />
+    <meta name="naver-site-verification" content="135a2e0fea312a286a2be7bf395aa6adbb2fa669" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-600a3c1972f03271"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST0E95MRV2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ST0E95MRV2');
+    </script>
+</head>
+
+<body class="container">
+    <nav class="p-3 container navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="https://animalface2.netlify.app/">요즘 동물상 테스트</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://goodface.netlify.app/">요즘 얼굴등급 테스트
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://wonderface.netlify.app/">요즘 관상 테스트
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="section">
+        <h1 class="title">요즘 동물상 테스트</h1>
+        <h2 class="subtitle">인공지능이 분석한 동물상</h2>
+        <h2 class="sr-only">나는 어떤 동물상일까?</h2>
+        <p class="sr-only">나와 비슷한 동물상을 가진 연예인은?</p>
+    </section>
+    <h3 class="pb-2 d-flex justify-content-center"> 암수 선택</h3>
+    <section class="d-flex justify-content-center">
+    </section>
+    <div class="d-md-flex flex-row bd-highlight mb-3 justify-content-center align-items-center">
+        <!-- <div class="mt-2 container d-flex justify-content-center ad-banner">
+            <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-kmCkViupqMKy3rI3" data-ad-width="320"
+                data-ad-height="100"></ins>
+        </div> -->
+        <div class="mt-2 container d-flex justify-content-center ">
+            <p class="d-flex align-items-center pr-3">암컷</p>
+            <div>
+                <input type="checkbox" id="gender" onclick="changeIcon();">
+                <label for="gender">
+                    <span class="knob">
+                        <i></i>
+                    </span>
+                </label>
+            </div>
+            <p class="d-flex align-items-center pl-3">수컷</p>
+        </div>
+
+        <!-- <div class="mt-2 container d-flex justify-content-center ad-banner">
+            <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-FYq1h3FVyeBojKio" data-ad-width="320"
+                data-ad-height="100"></ins>
+        </div> -->
+    </div>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <div class="mt-3 container file-upload">
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <img src="images\upload_ficon.png" class="mt-5 pt-2 upload">
+                <img src="images\click.svg" class="mt-5 pt-2 upload-click">
+                <h3 class="mb-5 pb-2 pt-2 upload-text">당신의 동물상은?</h3>
+            </div>
+        </div>
+        <div class="file-upload-content">
+            <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            <div id="loading" class="animated bounce">
+                <div class="spinner-grow" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <p class="text-center">인공지능이 얼굴 분석중...</p>
+            </div>
+            <p class="result-message"></p>
+            <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+            <div id="addThis" class="addthis_inline_share_toolbox"></div>
+            <div class="pt-3 image-title-wrap">
+                <button type="button p-2" class="try-again-btn" onclick="gaReload1();" data-toggle="modal"
+                    data-target="#adModal">
+                    <span class="try-again-text">또 궁금해요</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="d-md-flex flex-row bd-highlight mb-3 justify-content-between align-items-center">
+        <div class="noti">*사진은 저장되지 않아요.
+        </div>
+        <div>
+            <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" class="youtube-link">제작 도움 -By 조코딩 유튜브
+                채널</a>
+        </div>
+    </div>
+    <!-- kakao ad start -->
+    <div class="mt-2 container d-flex justify-content-center ad-banner">
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-kmCkViupqMKy3rI3" data-ad-width="320"
+            data-ad-height="100"></ins>
+    </div>
+    <div class="mt-2 container d-flex justify-content-center ad-banner">
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Kz7Zz07XMs27GqQd" data-ad-width="320"
+            data-ad-height="100"></ins>
+    </div>
+
+
+    <div class="mt-2 container d-flex justify-content-center ad-banner">
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-gjEJ8h3PNO3mOZ70" data-ad-width="300"
+            data-ad-height="250"></ins>
+    </div>
+
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+    <section id="yotube-bottom-link" class="mt-2 d-flex flex-column justify-content-center align-items-center"
+        onclick="gtag('event', '유튜브 클릭', {'event_category': '유튜브 클릭','event_label': '유튜브 홍보'});">
+        <h5 class="mt-1">요즘 핫한 youtube</h4>
+            <div>
+                <iframe width="320" height="180" src="https://www.youtube.com/embed/b2ndrOpPhSs" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                    onclick="gtag('event', '유관순 애국가', {'event_category': '유튜브 클릭','event_label': '유튜브 홍보'});">
+                </iframe>
+            </div>
+
+            <div>
+                <iframe width="320" height="180" src="https://www.youtube.com/embed/053mIWsL1Ts" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                    onclick="gtag('event', '주기도문', {'event_category': '유튜브 클릭','event_label': '유튜브 홍보'});">
+                </iframe>
+            </div>
+    </section>
+    <!-- kakao ad end -->
+
+    <footer class="footer pt-5 container d-flex justify-content-center align-items-center">
+        <div>
+            <p>&copy; Wonderman777 2021. All Rights Reserved. </p>
+        </div>
+
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="adModal" tabindex="-1" role="dialog" aria-labelledby="adModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title " id="adModalLabel">동물상에 관심이 많으시군요. 다시한번 더 궁금^^</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                    <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-gjEJ8h3PNO3mOZ70"
+                        data-ad-width="300" data-ad-height="250"></ins>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button p-2" class="try-again-btn" onclick="gaReload2();">
+                        <span class="try-again-text">다른 사진으로 재시도</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function changeIcon() {
+            if (document.getElementById("gender").checked) {
+                $('.upload').attr('src', "images\\upload_micon.png");
+            } else {
+                $('.upload').attr('src', "images\\upload_ficon.png");
+            }
+        }
+        function gaReload1() {
+            gtag('event', '다른 사진으로 재시도 1차', {
+                'event_category': '다른 사진으로 재시도'
+            });
+        }
+        function gaReload2() {
+            gtag('event', '다른 사진으로 재시도 2차', {
+                'event_category': '다른 사진으로 재시도'
+            });
+            window.location.reload();
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.readAsDataURL(input.files[0]);
+                reader.onload = function (e) {
+                    var tempImage = new Image();
+                    tempImage.src = reader.result;
+                    tempImage.onload = function () {
+                        var canvas = document.createElement('canvas');
+                        var canvasContext = canvas.getContext("2d");
+                        var MAX_WIDTH = 400;
+                        var MAX_HEIGHT = 400;
+                        var width = tempImage.width;
+                        var height = tempImage.height;
+                        if (width > height) {
+                            if (width > MAX_WIDTH) {
+                                height *= MAX_WIDTH / width;
+                                width = MAX_WIDTH;
+                            }
+                        } else {
+                            if (height > MAX_HEIGHT) {
+                                width *= MAX_HEIGHT / height;
+                                height = MAX_HEIGHT;
+                            }
+                        }
+                        canvas.width = width;
+                        canvas.height = height;
+                        canvasContext.drawImage(this, 0, 0, width, height);
+                        var dataURI = canvas.toDataURL("image/jpeg");
+                        $('.image-upload-wrap').hide();
+                        $('#loading').show();
+                        $('.file-upload-image').attr('src', dataURI);
+                        $('.file-upload-content').show();
+                        $('.image-title').html(input.files[0].name);
+                        init().then(function () {
+                            predict();
+                            $('#loading').hide();
+                        });
+                    }
+                }
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function () {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function () {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+    <script type="text/javascript">
+        let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/Zpi7kj7hU/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/OI83q7jrh/";
+        let model, webcam, labelContainer, maxPredictions;
+        async function init() {
+            if (document.getElementById("gender").checked) {
+                URL = urlMale;
+            } else {
+                URL = urlFemale;
+            }
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+        }
+
+        async function predict() {
+            var image = document.getElementById("face-image");
+            const prediction = await model.predict(image, false);
+            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+            var resultTitle, resultExplain, resultCeleb;
+            let degreeNum;
+            let reaulTitleSuffix = " 의 얼굴을 가지셨군요.";
+            if (document.getElementById("gender").checked) {
+                gtag('event', '남자 실행', {
+                    'event_category': '실행 결과',
+                    'event_label': '남자'
+                });
+                switch (prediction[0].className) {
+                    case "쥐상":
+                        degreeNum = "one";
+                        resultTitle = "꾀가 많은 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "쥐상은 하관이 짧고 체구가 작은 것이 특징이며, 부지런하고 꾀가 많으며 기회 포착을 잘한다. 그리고 식복이 있어 아무리 못살아도 밥은 먹고 살아가며, \
+                                        위험을 미리 감지하는 본능이 왔다갔다하며 재빨리 움직이는 눈에 있다. 또한 스스로 체구가 작아 미약하며 위엄 없어 보인다는 것을 일찌감치 파악해 어릴 때부터 주로 머리를 쓰며 동작 빠르게 살아가는 유형이다."
+                        resultCeleb = "민경훈 윤시윤 이명박 이특 하하"
+                        break;
+                    case "다람쥐상":
+                        degreeNum = "two";
+                        resultTitle = "부지런한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "다람쥐상은 하관이 짧고 체구가 작은 것이 특징이며, 부지런하고 꾀가 많으며 기회 포착을 잘한다. 그리고 식복이 있어 아무리 못살아도 밥은 먹고 살아가며, \
+                                        위험을 미리 감지하는 본능이 왔다갔다하며 재빨리 움직이는 눈에 있다. 또한 스스로 체구가 작아 미약하며 위엄 없어 보인다는 것을 일찌감치 파악해 어릴 때부터 주로 머리를 쓰며 동작 빠르게 살아가는 유형이다."
+                        resultCeleb = "이민혁"
+                        break;
+                    case "송아지상":
+                        degreeNum = "three";
+                        resultTitle = "지구력이 강한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "송아지상은 코가 크고 특히 코 평수가 넓직한 것이 특징이며, 체력이 뛰어나고 지구력과 참을성이 이를 데 없다. 입도 그에 못지않게 넙적하면서 다물든 벌리든 아구가 큰 것이 드러난다. \
+                                    또한 주위를 두루 살피면서도 입술은 얄팍하지 않아 언행이 가볍지 않은 유형이다."
+                        resultCeleb = "문세윤 문재인"
+                        break;
+                    case "호랑이상":
+                        degreeNum = "four";
+                        resultTitle = "진취적인 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "호랑이상은 눈매가 날카롭고 눈꼬리가 올라가 있으며 눈썹 숱이 많아 이목구비가 다른 동물상에 비해 훨씬 뚜렷한 것이 특징이며, 또한 진취적이고 호전적인 기질이 강해, 남성의 경우 대통령이나 정·재계 인사들에게서 많이 나타나는 관상으로 알려져 있다. \
+                                하지만 한편으로는 드세 보이거나 팔자가 세 보인다는 편견이 있는 인상이다."
+                        resultCeleb = "김윤석 노태우 백윤식 윤석열 이덕화 임재범 천호진 최민식"
+                        break;
+                    case "토끼상":
+                        degreeNum = "five";
+                        resultTitle = "사랑스러운 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "토끼상은 대체로 인중이 뚜렷하고 커다란 눈망울과 귀엽고 사랑스러운 분위기가 풍겨 모성애를 자극하는 얼굴상이다. 첫인상이 귀여워 이성의 유혹을 많이 받을 수 있으니 조심해야 한다."
+                        resultCeleb = "도티 정국 수호"
+                        break;
+                    case "용상":
+                        degreeNum = "six";
+                        resultTitle = "위엄있는 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "용상은 코가 높이 솟아 있고 귀는 눈썹보다 위에 위치하고 있으며 눈은 둥글면서 눈동자는 크고 눈썹은 굵고 짙은 것이 특징이다. 또한 이마·코·눈썹·광대뼈와 턱 부분이 발달되어 있다. \
+                                    전신에서 사람들을 압도하는 에너지가 뿜어져 나오고, 골격은 바위처럼 장대하면서 단정하다. 수염이 길고 아름다우며 두골의 좌우 상부가 튀어나와 있다. 인상의 전체적인 분위기는 위엄이 있으며, \
+                                    성격은 상황에 따라 태도가 자주 변하기 때문에 그 행동을 예측하기가 매우 어려운 사람이 많은 유형이다."
+                        resultCeleb = "김수환 정주영"
+                        break;
+                    case "뱀상":
+                        degreeNum = "seven";
+                        resultTitle = "간교한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "뱀상은 얼굴이 둥글며 목과 혀가 유난히 길고 입술이 얇은 것이 특징이며, 혀를 자주 움직이는 버릇이 있어 마치 뱀을 방불케 하며 눈에서는 살기를 느낄 수 있으며 간교한 느낌을 주는 유형이다."
+                        resultCeleb = "박정희"
+                        break;
+                    case "말상":
+                        degreeNum = "one";
+                        resultTitle = "건강한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "말상은 대체적으로 얼굴이 길고 크며 이목구비도 큼직하다. 건강하고 강인한 육체도 가지고 있다."
+                        resultCeleb = "강타 시원 유열 이수만 이문세 제이홉"
+                        break;
+                    case "원숭이상":
+                        degreeNum = "two";
+                        resultTitle = "머리가 명석한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "원숭이상은 입이 크고 귀가 양 옆으로 펼쳐져 있는게 특징이며, 머리가 명석하고 운동신경과 재주가 뛰어나지만 성품이 가볍고 경박하기도 하여 자기 꾀만 믿고 덤비다 크게 낭패하는 경우가 많다. 또한 성질이 급하고 호색한인 경우가 많은 유형이다."
+                        resultCeleb = "박원순 박진영 손민수 이재명 최진영 MC몽"
+                        break;
+                    case "강아지상":
+                        degreeNum = "three";
+                        resultTitle = "결혼하고 싶은 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "강아지상은 얼굴형과 이목구비가 동글동글하며 눈꼬리가 처져서 선해 보인다. 또한 통통한 볼살, 훈훈한 동안상, 깨끗하고 하얀 피부에 동그랗고 큰 눈, 수평형으로 자연스럽고 두께가 있는 눈썹, 살짝 쳐진 눈꼬리, 동그란 얼굴형의 얼굴로 결혼하고 싶은 훈남상이다."
+                        resultCeleb = "고수 송중기 김국진 전현무 백현"
+                        break;
+                    case "돼지상":
+                        degreeNum = "four";
+                        resultTitle = "식욕이 왕성한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "돼지상은 보통 볼살이 많고 목이 짧고 굵으며 입술은 두툼한 것이 특징이며, 재물운이 좋고 식욕이 왕성하여 쉽게 비만해지는 경향이 있으며, 웃음소리가 호탕하고 통이 커서 인복이 많다. \
+                                        하지만 무리한 체중 감량을 하면 복 또한 같이 빠져나가 인기가 하락하고 재물이 힘들어지는 경우가 많은 유형이다."
+                        resultCeleb = "강호동 김준현 정형돈"
+                        break;
+                    case "고양이상":
+                        degreeNum = "five";
+                        resultTitle = "연애하고 싶은 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "고양이상은 얼굴형이 입체적이고 이목구비가 화려하며 눈앞머리에서 눈꼬리로 갈수록 경사가 올라간다. 또한 날카롭고 오똑한 콧날 세련되고 도도한 차도남이면서 섹시하고 연애하고 싶은 남자이다."
+                        resultCeleb = "김수현 시우민 민현"
+                        break;
+                    case "여우상":
+                        degreeNum = "six";
+                        resultTitle = "홀리는 재주가 있는 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "여우상은 고양이상과 강아지상이 적절히 융합되어 있는 듯함이 특징이며, 눈빛이 능글맞고 사소한 행동으로도 사람을 홀리는 재주가 있어 도화살이 끼는 경우가 많은 유형이다."
+                        resultCeleb = "서인국 신혜성 육성재 이준 이준기 키"
+                        break;
+                    case "너구리상":
+                        degreeNum = "seven";
+                        resultTitle = "능청스러운 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "초롱초롱한 눈망울과 뚜혓한 이목구비를 가졌다. 광대가 발달하고 상대적으로 턱이 짧은 것이 특징. 능청스럽고 속이 편한 듯 보이지만 실제로는 무척 많은 노력을 기울인다. 행실이 바르고 정확한 사람이다."
+                        resultCeleb = "이낙연 조정석"
+                        break;
+                    case "사슴상":
+                        degreeNum = "one";
+                        resultTitle = "시샘이 있는 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "사슴의 얼굴처럼 이마가 발달되어 있는 반면 , 아래턱의 끝이 뽀족한 형태를 하고 있으며, 눈은 약각 횡으로 길다. 성격은 의심을 하거나 다른 사람을 시샘하는 경향이 강하다. 또한 장시간 같은 자세로 있지를 못하고 집중력과 침착함이 부족한다."
+                        resultCeleb = "차은우 최강창민"
+                        break;
+                    case "곰상":
+                        degreeNum = "two";
+                        resultTitle = "골격이 좋은 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "눈이 둥근 편이고 길이가 짧아 눈이 작아보인다. 콧구멍이 크고 들려있어 '재물이 새어나갈 위험이 크지만 부자가 될 관상이다. 입은 그렇게 크지 않다. 만약 키가 크지 않더라도 골격 자체가 좋은 편이다."
+                        resultCeleb = "김태우 임현식 정준하 카이"
+                        break;
+                    case "늑대상":
+                        degreeNum = "three";
+                        resultTitle = "남성미가 넘치는 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "전반적으로 얼굴이 각이 진 느낌이다. 남성미가 풍기며 투박한 느낌을 준다. 하관이 길고 턱이 발달되어 있으며 인중이 짧은 것이 특징이다. 사회적으로 큰 성취를 이룰 수 있는 군에 속한다."
+                        resultCeleb = "뷔"
+                        break;
+                    case "거북이상":
+                        degreeNum = "four";
+                        resultTitle = "매사 신중한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "이마가 평평한 듯 하며 눈이 큰 것이 특징이다. 행동이 굼뜨며, 말도 무척 느리다. 운동하고는 거리가 먼 사람이다. 매사에 신중하여 실수 하는 일이 적은 편이나 너무 신중한 나머지 오히려 때를 놓치는 경우도 있다."
+                        resultCeleb = "이건희"
+                        break;
+                    case "개구리상":
+                        degreeNum = "five";
+                        resultTitle = "최선을 다하는 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "다소 크고 약간은 돌출되어 보이기는 하는 눈과 살이 없고 매끈하면서 작은 코 형태를 갖고 있다. 특성으로는 안정적이고 어떤 기준과 조건 하에 최선을 다하는 면에서 매우 바람직하고 이상적인 배우자상이다."
+                        resultCeleb = "노무현 하현우"
+                        break;
+                    case "공룡상":
+                        degreeNum = "six";
+                        resultTitle = "매력이 넘치는 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "눈이 크고 미간이 넓다. 입이 크고 광대가 발달하였으며 입꼬리가 올라가 있어 매력적이다. "
+                        resultCeleb = "공유 김우빈 종현 첸"
+                        break;
+                    case "메기상":
+                        degreeNum = "seven";
+                        resultTitle = "성격이 활발한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "눈은 크리가 작고 두 눈 사이가 매우 넓다. 입은 크고 아래턱이 위턱보다 길다. 성격이 활발하고 재미있느 사람이다."
+                        resultCeleb = "이상운 이상준"
+                        break;
+                }
+            } else {
+                gtag('event', '여자 실행', {
+                    'event_category': '실행 결과',
+                    'event_label': '여자'
+                });
+                switch (prediction[0].className) {
+                    case "쥐상":
+                        degreeNum = "one";
+                        resultTitle = "꾀가 많은 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "쥐상은 하관이 짧고 체구가 작은 것이 특징이며, 부지런하고 꾀가 많으며 기회 포착을 잘한다. 그리고 식복이 있어 아무리 못살아도 밥은 먹고 살아가며, \
+                                        위험을 미리 감지하는 본능이 왔다갔다하며 재빨리 움직이는 눈에 있다. 또한 스스로 체구가 작아 미약하며 위엄 없어 보인다는 것을 일찌감치 파악해 어릴 때부터 주로 머리를 쓰며 동작 빠르게 살아가는 유형이다."
+                        resultCeleb = "최유진"
+                        break;
+                    case "다람쥐상":
+                        degreeNum = "two";
+                        resultTitle = "부지런한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "다람쥐상은 하관이 짧고 체구가 작은 것이 특징이며, 부지런하고 꾀가 많으며 기회 포착을 잘한다. 그리고 식복이 있어 아무리 못살아도 밥은 먹고 살아가며, \
+                                        위험을 미리 감지하는 본능이 왔다갔다하며 재빨리 움직이는 눈에 있다. 또한 스스로 체구가 작아 미약하며 위엄 없어 보인다는 것을 일찌감치 파악해 어릴 때부터 주로 머리를 쓰며 동작 빠르게 살아가는 유형이다."
+                        resultCeleb = "사나 웬디 한승연"
+                        break;
+                    case "토끼상":
+                        degreeNum = "three";
+                        resultTitle = "사랑스러운 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "토끼상은 대체로 인중이 뚜렷하고 커다란 눈망울과 귀엽고 사랑스러운 분위기가 풍겨 모성애를 자극하는 얼굴상이다. 첫인상이 귀여워 이성의 유혹을 많이 받을 수 있으니 조심해야 한다."
+                        resultCeleb = "아이유 김슬기 나연 수지 수빈 아이린 이나은 장원영"
+                        break;
+                    case "용상":
+                        degreeNum = "four";
+                        resultTitle = "위엄있는 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "용상은 코가 높이 솟아 있고 귀는 눈썹보다 위에 위치하고 있으며 눈은 둥글면서 눈동자는 크고 눈썹은 굵고 짙은 것이 특징이다. 또한 이마·코·눈썹·광대뼈와 턱 부분이 발달되어 있다. \
+                                    전신에서 사람들을 압도하는 에너지가 뿜어져 나오고, 골격은 바위처럼 장대하면서 단정하다. 수염이 길고 아름다우며 두골의 좌우 상부가 튀어나와 있다. 인상의 전체적인 분위기는 위엄이 있으며, \
+                                    성격은 상황에 따라 태도가 자주 변하기 때문에 그 행동을 예측하기가 매우 어려운 사람이 많은 유형이다."
+                        resultCeleb = "김연아"
+                        break;
+                    case "뱀상":
+                        degreeNum = "five";
+                        resultTitle = "간교한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "뱀상은 얼굴이 둥글며 목과 혀가 유난히 길고 입술이 얇은 것이 특징이며, 혀를 자주 움직이는 버릇이 있어 마치 뱀을 방불케 하며 눈에서는 살기를 느낄 수 있으며 간교한 느낌을 주는 유형이다."
+                        resultCeleb = "김옥빈 청하 헤이즈"
+                        break;
+                    case "말상":
+                        degreeNum = "six";
+                        resultTitle = "건강한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "말상은 대체적으로 얼굴이 길고 크며 이목구비도 큼직하다. 건강하고 강인한 육체도 가지고 있다."
+                        resultCeleb = "가희"
+                        break;
+                    case "원숭이상":
+                        degreeNum = "seven";
+                        resultTitle = "머리가 명석한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "원숭이상은 입이 크고 귀가 양 옆으로 펼쳐져 있는게 특징이며, 머리가 명석하고 운동신경과 재주가 뛰어나지만 성품이 가볍고 경박하기도 하여 자기 꾀만 믿고 덤비다 크게 낭패하는 경우가 많다. 또한 성질이 급하고 호색한인 경우가 많은 유형이다."
+                        resultCeleb = "최진실"
+                        break;
+                    case "강아지상":
+                        degreeNum = "one";
+                        resultTitle = "결혼하고 싶은 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "강아지상은 얼굴형과 이목구비가 동글동글하며 눈꼬리가 처져서 선해 보인다. 또한 통통한 볼살, 훈훈한 동안상, 깨끗하고 하얀 피부에 동그랗고 큰 눈, 수평형으로 자연스럽고 두께가 있는 눈썹, 살짝 쳐진 눈꼬리, 동그란 얼굴형의 얼굴로 결혼하고 싶은 훈녀상이다."
+                        resultCeleb = "박보영 수지 구혜선 문근영 임수정 한가인 한효주"
+                        break;
+                    case "돼지상":
+                        degreeNum = "two";
+                        resultTitle = "식욕이 왕성한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "돼지상은 보통 볼살이 많고 목이 짧고 굵으며 입술은 두툼한 것이 특징이며, 재물운이 좋고 식욕이 왕성하여 쉽게 비만해지는 경향이 있으며, 웃음소리가 호탕하고 통이 커서 인복이 많다. \
+                                        하지만 무리한 체중 감량을 하면 복 또한 같이 빠져나가 인기가 하락하고 재물이 힘들어지는 경우가 많은 유형이다."
+                        resultCeleb = "강소라 고현정 서현 소유 손나은 솔비 송가인 옥주현 이하늬"
+                        break;
+                    case "고양이상":
+                        degreeNum = "five";
+                        resultTitle = "연애하고 싶은 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "고양이상은 얼굴형이 입체적이고 이목구비가 화려하며 눈앞머리에서 눈꼬리로 갈수록 경사가 올라간다. 또한 날카롭고 오똑한 콧날 세련되고 도도한 차도남이면서 섹시하고 연애하고 싶은 여자이다."
+                        resultCeleb = "이효리 한예슬 김민희 김희선 한채영 박지윤 고소영 제시카 제니"
+                        break;
+                    case "여우상":
+                        degreeNum = "six";
+                        resultTitle = "홀리는 재주가 있는 " + pprediction[0].className + reaulTitleSuffix;
+                        resultExplain = "여우상은 고양이상과 강아지상이 적절히 융합되어 있는 듯함이 특징이며, 눈빛이 능글맞고 사소한 행동으로도 사람을 홀리는 재주가 있어 도화살이 끼는 경우가 많은 유형이다."
+                        resultCeleb = "가인 박경리 유인나 제시카 지연 한혜진"
+                        break;
+                    case "너구리상":
+                        degreeNum = "seven";
+                        resultTitle = "능청스러운 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "초롱초롱한 눈망울과 뚜혓한 이목구비를 가졌다. 광대가 발달하고 상대적으로 턱이 짧은 것이 특징. 능청스럽고 속이 편한 듯 보이지만 실제로는 무척 많은 노력을 기울인다. 행실이 바르고 정확한 사람이다."
+                        resultCeleb = "모모"
+                        break;
+                    case "사슴상":
+                        degreeNum = "one";
+                        resultTitle = "시샘이 있는 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "사슴의 얼굴처럼 이마가 발달되어 있는 반면 , 아래턱의 끝이 뽀족한 형태를 하고 있으며, 눈은 약각 횡으로 길다. 성격은 의심을 하거나 다른 사람을 시샘하는 경향이 강하다. 또한 장시간 같은 자세로 있지를 못하고 집중력과 침착함이 부족한다."
+                        resultCeleb = "윤아 전지현 신예은"
+                        break;
+                    case "거북이상":
+                        degreeNum = "two";
+                        resultTitle = "매사 신중한 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "이마가 평평한 듯 하며 눈이 큰 것이 특징이다. 행동이 굼뜨며, 말도 무척 느리다. 운동하고는 거리가 먼 사람이다. 매사에 신중하여 실수 하는 일이 적은 편이나 너무 신중한 나머지 오히려 때를 놓치는 경우도 있다."
+                        resultCeleb = "솔라 하연수"
+                        break;
+                    case "개구리상":
+                        degreeNum = "three";
+                        resultTitle = "최선을 다하는 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "다소 크고 약간은 돌출되어 보이기는 하는 눈과 살이 없고 매끈하면서 작은 코 형태를 갖고 있다. 특성으로는 안정적이고 어떤 기준과 조건 하에 최선을 다하는 면에서 매우 바람직하고 이상적인 배우자상이다."
+                        resultCeleb = "전소민 조보아 김소현"
+                        break;
+                    case "공룡상":
+                        degreeNum = "four";
+                        resultTitle = "매력이 넘치는 " + prediction[0].className + reaulTitleSuffix;
+                        resultExplain = "눈이 크고 미간이 넓다. 입이 크고 광대가 발달하였으며 입꼬리가 올라가 있어 매력적이다. "
+                        resultCeleb = "송지효 김아중 한지민 천우희 신미아"
+                        break;
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            }
+            var title = "<div class='" + degreeNum + "-title'>" + resultTitle + "</div>"
+            var explain = "<div class='result-explain pt-2'>" + resultExplain + "</div>"
+            var celeb = "<div class='" + degreeNum + "-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+            $('.result-message').html(title + explain + celeb);
+            var barWidth;
+            for (let i = 0; i < 5; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%"
+                } else {
+                    barWidth = "2%"
+                }
+                var labelTitle = prediction[i].className;
+                let boxName = "one";
+                switch (i) {
+                    case 0:
+                        boxName = "one"
+                        break;
+                    case 1:
+                        boxName = "two"
+                        break;
+                    case 2:
+                        boxName = "three"
+                        break;
+                    case 3:
+                        boxName = "four"
+                        break;
+                    case 4:
+                        boxName = "five"
+                        break;
+                }
+                var label = "<div class='result-label d-flex align-items-center'>" + labelTitle + "</div>"
+                var bar = "<div class='bar-container position-relative container'><div class='" + boxName + "-box'> \
+                        </div><div class='d-flex justify-content-center align-items-center " + boxName + "-bar' style='width: " + barWidth + "'> \
+                        <span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }
+        }
+    </script>
+</body>
+<!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+gender toggle
+Copyright (c) 2020 by Mert Cukuren (https://codepen.io/knyttneve/pen/bPpEZY)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+
+</html>
